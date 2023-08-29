@@ -72,7 +72,7 @@ Clone this repository to your desired folder:
 
 ```
   git clone https://github.com/Benawi/Blog-App.git
-  cd blog-app
+  cd Blog-App
 ```
 
 ### Install
@@ -85,7 +85,7 @@ Install project dependencies with:
 ### Run localy
  - Then go to the right folder 
 ```
-$ cd blog app
+$ cd Blog-App
 ```
 ```
 $ bundle
