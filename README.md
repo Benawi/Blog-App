@@ -138,8 +138,8 @@ $ rails db:seed
 - [ ]  Setup and controllers.
 - [ ]  Controllers specs.
 - [ ]  Views.
-- [ ]  7: Forms.
-- [ ] Integration specs for Views and fixing n+1 problems.
+- [ ]  Forms.
+- [ ]  Integration specs for Views and fixing n+1 problems.
 - [ ]  Add Devise.
 - [ ]  Add authorization rules.
 - [ ]  Add API endpoints.
