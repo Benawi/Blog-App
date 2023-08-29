@@ -44,10 +44,13 @@ PostgreSQL  </a></li>
 
 ###  Key Features <a name="key-features"></a>
 
-- [x] Implement encapsulation and inheritance with Ruby.
-- [x] Set up associations between classes and objects.
-- [x] Store data in files.
-- [x] Build interactive console apps
+- [x] Display Users, posts,comments on posts, likes on posts
+- [x] Create a new app. 
+- [x] The project has a Postgres database set up.
+- [x] Create and run the necessary migration files.
+- [x] Table and column names match the [ERD](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd.png) diagram with [developed](https://github.com/Benawi/Blog-App/assets/21217148/5b403dca-d56b-4a66-bc96-58efbf0d7eae)
+        
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
