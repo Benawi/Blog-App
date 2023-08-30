@@ -6,8 +6,9 @@ class User < ApplicationRecord
     posts = Post.all
     posts.order(created_at: :desc).limit(3)
   end
+
   def update_posts_counter
     posts_counter = Post.where(author_id: id).count
-    update(posts_counter: posts_counter)
+    update(posts_counter:)
   end
 end
