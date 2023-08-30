@@ -46,6 +46,7 @@ PostgreSQL  </a></li>
 
 - [x] Display Users, posts,comments on posts, likes on posts
 - [x] Create a new app. 
+- [x] Processing data in model
 - [x] The project has a Postgres database set up.
 - [x] Create and run the necessary migration files.
 - [x] Table and column names match the [ERD](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd.png) diagram with [developed](https://github.com/Benawi/Blog-App/assets/21217148/5b403dca-d56b-4a66-bc96-58efbf0d7eae)
@@ -132,7 +133,6 @@ $ rails db:seed
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ] Creating a data model.
 - [ ]  Validations and Model specs.
 - [ ]  Processing data in models.
 - [ ]  Setup and controllers.
