@@ -3,6 +3,11 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: 'post_id', class_name: 'Comment'
   has_many :likes, foreign_key: 'post_id', class_name: 'Like'
 
+  # Callback
+  after_save :update_comments_counter
+  after_save :update_likes_counter
+  after_save :most_recent_comments
+
   def update_comments_counter
     comments_counter = Comment.where(post_id: id).count
     update(comments_counter:)
