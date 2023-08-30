@@ -7,4 +7,9 @@ class Post < ApplicationRecord
         comments_counter = Comment.where(post_id: id).count
         update(comments_counter: comments_counter)
     end
+
+    def update_likes_counter
+        likes_counter = Like.where(post_id: id).count
+        update(likes_counter: likes_counter)
+    end
 end
