@@ -22,5 +22,13 @@ RSpec.describe Comment, type: :model do
     expect(subject).to_not be_valid
   end
 
-  
+  it 'checks that "author_id" is an integer' do
+    subject.author_id = 7
+    expect(subject).to be_valid
+  end
+
+  it 'checks that "post_id" is an integer' do
+    subject.post_id = 7
+    expect(subject).to be_valid
+  end
 end
