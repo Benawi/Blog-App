@@ -21,4 +21,8 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'is not valid with posts_counter not integer' do
+    subject.posts_counter = 7.7
+    expect(subject).to_not be_valid
+  end
 end
