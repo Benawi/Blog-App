@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   has_many :comments, foreign_key: 'post_id', class_name: 'Comment'
   has_many :likes, foreign_key: 'post_id', class_name: 'Like'
 
+  validates :title, presence: true, length: { maximum: 250 }
+  
   # Callback
   after_save :update_comments_counter
   after_save :update_likes_counter
