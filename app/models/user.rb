@@ -3,7 +3,8 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: 'author_id', class_name: 'Comment'
   has_many :likes, foreign_key: 'author_id', class_name: 'Like'
 
-  # Callback
+  validates :name, presence: true
+  git
   after_save :most_recent_posts
   after_save :update_posts_counter
   def most_recent_posts
