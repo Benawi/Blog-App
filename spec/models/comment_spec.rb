@@ -17,5 +17,10 @@ RSpec.describe Comment, type: :model do
     expect(subject).to be_valid
   end
 
+  it 'is not valid without a text' do
+    subject.text = nil
+    expect(subject).to_not be_valid
+  end
+
   
 end
