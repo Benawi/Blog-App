@@ -20,5 +20,10 @@ it 'is valid with valid attributes' do
   expect(subject).to be_valid
 end
 
+it 'is valid with not valid attributes' do
+  subject.text = text
+  expect(subject).to_not be_valid
+end
+
 
 end
