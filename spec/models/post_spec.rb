@@ -40,4 +40,10 @@ it 'is not valid with likes_counter negative' do
   expect(subject).to_not be_valid
 end
 
+it 'is not valid with likes_counter not integer' do
+  subject.likes_counter = 7.7
+  expect(subject).to_not be_valid
+end
+
+
 end
