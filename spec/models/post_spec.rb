@@ -35,5 +35,9 @@ it 'is not valid without a text' do
   expect(subject).to_not be_valid
 end
 
+it 'is not valid with likes_counter negative' do
+  subject.likes_counter = -5
+  expect(subject).to_not be_valid
+end
 
 end
