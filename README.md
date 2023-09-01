@@ -34,19 +34,35 @@ The project is a repository consisting of the following files:
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
   <ul>
-   <li><a href="https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/lessons/basic_syntax.md">Ruby</a></li><li><a href="https://rubyonrails.org/">Rails on Rails </a></li>
-   <li><a href="https://guides.rubyonrails.org/active_record_basics.html#what-is-active-record-questionmark">ORM - Migration - 
-PostgreSQL  </a></li>
+     <li>
+      <a href="https://www.ruby-lang.org/en/">
+      <img align="center" width="19" height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/198px-Ruby_logo.svg.png?20101129171534" alt="ruby logo" />
+      Ruby
+      </a>
+    </li>
+    <li>
+      <a href="https://rubyonrails.org/">
+      <img align="center" width="19" height="auto" src="./rails-red-logo.svg" alt="ruby logo" />
+      Rails
+      </a>
+    </li>
+    <li>
+      <a href="https://www.postgresql.org/">
+      <img align="center" width="19" height="auto" src="https://wiki.postgresql.org/images/3/30/PostgreSQL_logo.3colors.120x120.png" alt="postgreSQL logo" />
+      PostgreSQL
+      </a>
+    </li>
+  </ul>
+  
 </ul>
-
 
 ###  Key Features <a name="key-features"></a>
 
 - [x] Display Users, posts,comments on posts, likes on posts
 - [x] Create a new app. 
 - [x] Processing data in model
+- [x] Validations and Model specs.
 - [x] The project has a Postgres database set up.
 - [x] Create and run the necessary migration files.
 - [x] Table and column names match the [ERD](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd.png) diagram with [developed](https://github.com/Benawi/Blog-App/assets/21217148/5b403dca-d56b-4a66-bc96-58efbf0d7eae)
@@ -113,10 +129,26 @@ $ rails db:seed
 
 ### Run Tests <a name="run-tests"></a>
 
- To run Request specs locally you need just to run this following command in your terminal :
+Go to your gemfile and add the RSpec gem in the development, test group:
 
  ```
- $ bundle exec rspec
+ group :development, :test do  
+  gem 'rspec-rails'
+ end
+ ```
+Then in your terminal run the command:
+
+ ```
+  $ bundle install
+ ```
+To set up RSpec in your app and create the Spec folder run:
+
+ ```
+  $ rails generate rspec:install
+ ```
+  To run Request specs locally you need just to run this following command in your terminal :
+ ```
+ $ rspec spec/model/
  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -133,12 +165,10 @@ $ rails db:seed
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
-- [ ]  Validations and Model specs.
 - [ ]  Processing data in models.
 - [ ]  Setup and controllers.
 - [ ]  Controllers specs.
-- [ ]  Views.
-- [ ]  Forms.
+- [ ]  Views, Forms.
 - [ ]  Integration specs for Views and fixing n+1 problems.
 - [ ]  Add Devise.
 - [ ]  Add authorization rules.
