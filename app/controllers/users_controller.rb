@@ -10,5 +10,9 @@ class UsersController < ApplicationController
       @posts = Post.where(author_id: @user.id)
     end
   
-    
+    def create
+      @user = User.create(user_params)
+      redirect_to @user
+    end
+  
 end
