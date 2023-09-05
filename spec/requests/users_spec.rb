@@ -18,6 +18,8 @@ RSpec.describe 'Users', type: :request do
       expect(response).to_not render_template(:show)
     end
 
+    it 'shows the correct placeholder text' do
+      expect(response.body).to include('User was successfully created.')
+    end
   
-  end
 end
