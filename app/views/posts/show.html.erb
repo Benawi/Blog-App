@@ -1,1 +1,25 @@
-<h1>Here is the detail of individual comments</h1>
+<%= render "layouts/header" %>
+<div class="all-posts-container">
+    <div class="d-flex flex-column py-3">
+     <div class= "single-post ">
+      <h2>Post #<%= @post.id %> by <%= @user.name %></h2>
+       <div class="d-flex likes-comments-container">
+       <span>Comments: <%= @post.comments_counter || 0 %></span>
+         <span>Likes: <%= @post.likes_counter || 0 %></span>
+     </div>
+     <p><%= @post.text %></p>
+     </div>
+      <ul class="comments-list single-post">
+        <% @comments.each do |comment| %>
+          <li><%= comment.find_author%> : <%= comment.text%></li>
+        <%end%>
+      </ul>
+      
+   </div>
+  
+</div>
+<button type="button">
+<%=  link_to "Go back", root_path, class: "btn btn-primary w-25"%>
+</button>
+<%= render "layouts/footer" %>
+
