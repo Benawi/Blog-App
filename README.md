@@ -150,6 +150,7 @@ To set up RSpec in your app and create the Spec folder run:
   To run Request specs locally you need just to run this following command in your terminal :
  ```
  $ rspec spec/model/
+ $ rspec spec/models/ --format documentation 
  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
