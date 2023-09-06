@@ -1,15 +1,26 @@
-<div class="container">
-  <h1 class="py-5"><%= @user.name %> Detail</h1>
-  <%= render partial: "layouts/header", locals: {user: @user} %>
-  <div class="w-100 border border-dark my-4 p-3">
-     <h2>BIO</h2>
-     <p><%= @user.bio %></p>
-  </div>
-  <h2><%= @user.name %>'s Posts</h2>
+<%= render "layouts/header" %>
+<div class="show-user-container">
+ <div class="show-header">
+    <img src="<%= @user.photo %>" alt="user photo">
+    <div>
+        <h2>Name: <%= @user.name %></h2>
+      
+    </div>
+ </div>
+ <div class="bio">
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+ </div>
+
   <% @user.most_recent_posts.each do |post| %>
+   <div class="show-posts">
     <%= render partial: "posts/post", locals: {post: post, user: @user} %>
-  <% end %>
-  <div class="d-flex justify-content-center align-items-center w-100 py-5">
-    <%= link_to "See all posts", user_posts_path(@user.id), {class: "btn btn-primary w-25"}%>
   </div>
+  <% end %>
 </div>
+<button type="button">
+ <%= link_to "See all", user_posts_path(@user.id), {class: "btn btn-primary w-25"}%>
+</button>
+
+<%= render "layouts/footer" %>
+
