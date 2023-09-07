@@ -19,7 +19,8 @@
   <% end %>
 </div>
 <button type="button">
- <%= link_to "See all", user_posts_path(@user.id), {class: "btn btn-primary w-25"}%>
+<%= link_to "See all ", user_posts_path(@user) %>
+ 
 </button>
 
 <%= render "layouts/footer" %>

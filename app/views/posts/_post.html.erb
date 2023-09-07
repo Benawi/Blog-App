@@ -1,5 +1,6 @@
 <%=  link_to user_post_path(user.id, post.id), {class: " d-flex flex-column mt-5 text-decoration-none text-dark"} do%>
      <h2>Post #<%= post.id %></h2>
+      <h2><%= post.title %></h2>
      <p><%= truncate_text(post.text) %></p>
      <div class="d-flex likes-comments-container">
        <span>Comments: <%= post.comments_counter || 0 %></span>
