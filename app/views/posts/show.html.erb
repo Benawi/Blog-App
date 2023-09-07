@@ -8,11 +8,14 @@
          <span>Likes: <%= @post.likes_counter || 0 %></span>
      </div>
      <p><%= @post.text %></p>
- <%= form_with(model: @like, url: post_likes_path(@post), method: :post) do |form| %>
-    <%= form.hidden_field :users_id, value: @user.id %>
-    <%= form.hidden_field :posts_id, value: @post.id %>
-    <%= form.submit "Like" %>
-  <% end %>
+<%= form_with(model: @like, url: post_likes_path(@post), method: :post) do |form| %>
+  <%= form.hidden_field :users_id, value: @user.id %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+
+  <%= form.submit "Like" %>
+<% end %>
+
+
  </div>
   </div>
 
