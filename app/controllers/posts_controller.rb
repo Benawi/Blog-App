@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     @posts = @user.posts
     @post = Post.new
   end
+
   def show
     @post = Post.find_by_id(params[:id])
     @user = User.find_by_id(@post.author_id)
