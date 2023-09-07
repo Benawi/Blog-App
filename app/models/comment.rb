@@ -8,4 +8,8 @@ class Comment < ApplicationRecord
   def update_comments_count
     post.increment!(:comments_counter)
   end
+
+  def find_author
+    User.find(author_id).name
+  end
 end

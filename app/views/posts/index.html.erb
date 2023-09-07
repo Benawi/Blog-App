@@ -1,1 +1,30 @@
-<h1>Here is a list of all posts</h1>
+<%= render "layouts/header" %>
+<div class="posts-container">
+ <div class="posts-header">
+  <img src="<%= @user.photo %>" alt="user photo">
+  <div>
+     <h2>Name: <%= @user.name %></h2>
+    
+  </div>
+ </div>
+ <% @posts.each do |post| %>
+ <div class="all-posts-container">
+    <div class="all-posts">
+      <%= render partial: "posts/post", locals: {post: post, user: @user} %>
+      </div>
+      <div>
+      <ul class="post-comments comments-list">
+        <% post.most_recent_comments.each do |comment| %>
+          <li><%= comment.find_author%> : <%= comment.text%></li>
+        <%end%>
+      </ul>
+    </div>  
+ </div>
+
+
+ <% end %>
+</div>
+
+<button type="button">Pagination</button>
+
+<%= render "layouts/footer" %>

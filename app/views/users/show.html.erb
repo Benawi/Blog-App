@@ -1,2 +1,26 @@
-<h1>Here is the profile of individual user</h1>
-<p>On Construction</p>
+<%= render "layouts/header" %>
+<div class="show-user-container">
+ <div class="show-header">
+    <img src="<%= @user.photo %>" alt="user photo">
+    <div>
+        <h2>Name: <%= @user.name %></h2>
+      
+    </div>
+ </div>
+ <div class="bio">
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+ </div>
+
+  <% @user.most_recent_posts.each do |post| %>
+   <div class="show-posts">
+    <%= render partial: "posts/post", locals: {post: post, user: @user} %>
+  </div>
+  <% end %>
+</div>
+<button type="button">
+ <%= link_to "See all", user_posts_path(@user.id), {class: "btn btn-primary w-25"}%>
+</button>
+
+<%= render "layouts/footer" %>
+
