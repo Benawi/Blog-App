@@ -7,7 +7,6 @@ class Like < ApplicationRecord
   def update_post_likes_counter
     post.increment!(:likes_counter)
   end
-
 end
 # Code to verify if the update_post_comments_counter method is working
 # Like.create(users_id: user.id, posts_id: post.id)

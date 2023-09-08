@@ -5,7 +5,6 @@ class LikesController < ApplicationController
     @like = Like.new(author_id: current_user.id, post_id: @post.id)
     @like.update_post_likes_counter
     redirect_to user_post_path(@post), notice: 'Post liked successfully.'
-    
   end
 
   private

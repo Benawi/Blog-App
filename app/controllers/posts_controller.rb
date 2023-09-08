@@ -22,9 +22,9 @@ class PostsController < ApplicationController
     @user = current_user
     @post = Post.new(post_params.merge(author_id: @user.id))
     if @post.save
-      
+
       @post.update_posts_count
-    
+
       redirect_to user_posts_path(@user), notice: 'Post created successfully.'
     else
       @posts = @user.posts
