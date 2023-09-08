@@ -1,21 +1,16 @@
-<%= render "layouts/header" %>
-<div class="all-posts-container">
-    <div class="d-flex flex-column py-3">
-     <div class= "single-post ">
-      <h2>Post #<%= @post.id %> by <%= @user.name %></h2>
-       <div class="d-flex likes-comments-container">
-       <span>Comments: <%= @post.comments_counter || 0 %></span>
-         <span>Likes: <%= @post.likes_counter || 0 %></span>
-     </div>
-     <p><%= @post.text %></p>
-<%= form_with(model: @like, url: post_likes_path(@post), method: :post) do |form| %>
-  <%= form.hidden_field :users_id, value: @user.id %>
-  <%= form.hidden_field :post_id, value: @post.id %>
-
-  <%= form.submit "Like" %>
-<% end %>
-
-
+<%= render "shared/header" %>
+  <div class="single-post">
+    <h2><%= @post.title %></h2>
+    <div>
+      <span>Comments: <%= @post.comments_counter %></span>
+      <span>Likes: <%= @post.likes_counter %></span>
+    </div>
+    <p><%= @post.text %></p>
+    <%= form_with(model: @like, url: post_likes_path(@post), method: :post) do |form| %>
+    <%= form.hidden_field :author_id, value: @user.id %>
+    <%= form.hidden_field :post_id, value: @post.id %>
+    <%= form.submit "Like" %>
+  <% end %>
  </div>
   </div>
 
@@ -26,19 +21,15 @@
 
     <%= form.submit "Add Comment" %><br>
   <% end %>
-
-     </div>
-      <ul class="comments-list single-post">
-        <% @comments.each do |comment| %>
-          <li><%= comment.find_author%> : <%= comment.text%></li>
-        <%end%>
-      </ul>
-      
-   </div>
-  
-</div>
-<button type="button">
+ </div>
+    
+  <h1 class="comments-header"> comments</h1>
+  <div class="post-comments">
+  <% @post.comments.each do |comment| %>
+      <h4>Username: <%= comment.user.name %> - <span> <%= comment.text %> </span> </h4>
+  <% end %>
+  </div>
+  <button type="button">
 <%=  link_to "Go back", root_path, class: "btn btn-primary w-25"%>
 </button>
-<%= render "layouts/footer" %>
-
+<%= render "shared/footer" %>

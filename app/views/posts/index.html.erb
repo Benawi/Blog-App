@@ -1,22 +1,22 @@
-<%= render "layouts/header" %>
+<%= render "shared/header" %>
 <div class="posts-container">
- <% @posts.each do |post| %>
- <div class="all-posts-container">
-    <div class="all-posts">
-      <%= render partial: "posts/post", locals: {post: post, user: @user} %>
+  <% @posts.each do |post| %>
+    <div class="all-posts-container">
+      <div class="all-posts">
+         <%= render partial: "posts/post", locals: {post: post, user: @user} %>
+        </div>
       </div>
-      <div>
-      <ul class="post-comments comments-list">
-        <% post.most_recent_comments.each do |comment| %>
-          <li><%= comment.find_author%> : <%= comment.text%></li>
-        <%end%>
-      </ul>
-    </div>  
- </div>
+    </div>
 
-
- <% end %>
+    <h1 class="comments-header">comments</h1>
+    <div class="post-comments">
+      <% post.comments.each do |comment| %>
+        <h4>Username: <%= comment.user.name %> - <span> <%= comment.text %> </span> </h4>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+
 <%= form_with(model: @post, url: create_user_post_path(@user), method: :post) do |form| %>
   <%= form.hidden_field :author_id, value: @user.id %>
   <%= form.hidden_field :comments_counter, value: 0 %>
@@ -30,6 +30,7 @@
 
   <%= form.submit "Create Post" %><br>
 <% end %>
+
 <button type="button">Pagination</button>
 
-<%= render "layouts/footer" %>
+<%= render "shared/footer" %>
