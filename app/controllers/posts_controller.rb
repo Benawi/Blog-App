@@ -1,14 +1,18 @@
 class PostsController < ApplicationController
+  # The index function retrieves a user and their posts, and initializes a new post object.
   def index
     @user = current_user
     @posts = @user.posts
     @post = Post.new
   end
 
+  # The function assigns variables for a post, comment, like, and user in order
+  # to display them in a view.
   def show
-    @post = Post.find_by_id(params[:id])
-    @user = User.find_by_id(@post.author_id)
-    @comments = Comment.where(post_id: @post.id)
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @like = Like.new
+    @user = current_user
   end
 
   # The `create` function creates a new post and associates it with the current user,
@@ -18,7 +22,9 @@ class PostsController < ApplicationController
     @user = current_user
     @post = Post.new(post_params.merge(author_id: @user.id))
     if @post.save
+      
       @post.update_posts_count
+    
       redirect_to user_posts_path(@user), notice: 'Post created successfully.'
     else
       @posts = @user.posts
