@@ -12,4 +12,9 @@ RSpec.describe 'User index page', type: :feature do
   before do
     visit root_path
   end
-end
+
+  it 'displays the username of all other users' do
+    users.each do |user|
+      expect(page).to have_content(user.name)
+    end
+  end
