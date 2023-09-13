@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Post show page', type: :feature do
-  let!(:user) { User.create(name: 'Sarkodie', photo: '/path/to/photo1.jpg', post_counter: 10) }
+  let!(:user) { User.create(name: 'Sarkodie', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', posts_counter: 10) }
   let!(:post) do
     Post.create(
       title: 'Test Post',
@@ -22,6 +22,7 @@ RSpec.describe 'Post show page', type: :feature do
     it 'displays the number of comments' do
       expect(page).to have_content("Comments: #{post.comments_counter}")
     end
+
 
     it 'displays the number of likes' do
       expect(page).to have_content("Likes: #{post.likes_counter}")
