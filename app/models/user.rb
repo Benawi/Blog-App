@@ -21,4 +21,3 @@ class User < ApplicationRecord
 end
 
 # Code to verify if the three_most_recent_posts method is working
-
