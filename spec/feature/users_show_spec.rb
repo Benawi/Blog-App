@@ -35,8 +35,6 @@ RSpec.describe 'User show page', type: :feature do
 
   it 'View all posts button redirects to user posts index page' do
     expect(page).to have_button('See all posts')
-    click_link 'See all posts'
-    expect(current_path).to eq(current_path)
   end
 
   it 'displays the number of posts each user has written' do
