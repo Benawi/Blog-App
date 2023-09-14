@@ -1,4 +1,15 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # devise :database_authenticatable, :registerable,
+  #       :recoverable, :rememberable, :validatable
+  # devise :database_authenticatable, :registerable,
+  # :recoverable, :rememberable, :validatable, :confirmable
+
   has_many :comments, foreign_key: 'author_id'
   # counter_cache makes sure Rails automatically update the PostCounter
   # attribute in the User model when posts are created or destroyed.
@@ -11,7 +22,7 @@ class User < ApplicationRecord
   # is adding a validation to the `User` model. It ensures that the `PostCounter` attribute is a
   # numerical value and that it is greater than or equal to 0. This means that the `PostCounter`
   # attribute cannot be a non-integer value or a negative number.
-  validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  # validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   # The function retrieves the three most recent posts written
   # by the author.
