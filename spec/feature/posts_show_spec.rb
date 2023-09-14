@@ -15,7 +15,7 @@ RSpec.describe 'Post show page', type: :feature do
   describe 'GET #show' do
     before { visit user_post_path(post) }
 
-      it 'displays the number of comments' do
+    it 'displays the number of comments' do
       expect(page).to have_content("Comments: #{post.comments_counter}")
     end
 
@@ -27,7 +27,7 @@ RSpec.describe 'Post show page', type: :feature do
       expect(page).to have_content("Likes: #{post.likes_counter}")
     end
 
-        it 'displays the username of each commenter and their comment' do
+    it 'displays the username of each commenter and their comment' do
       post.comments.each do |comment|
         expect(page).to have_content("#{comment.user.name} - #{comment.text}")
       end

@@ -45,7 +45,7 @@ RSpec.describe 'User show page', type: :feature do
       visit user_path(user)
     end
   end
-  
+
   it 'displays the number of posts each user has written' do
     users.each do |user|
       expect(page).to have_content("Number of posts: #{user.posts_counter}")
