@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
     # Replace '/your_custom_path' with the path you want to redirect to after sign-out
     '/users/sign_in'
   end
+
   protected
 
   def configure_permitted_parameters
