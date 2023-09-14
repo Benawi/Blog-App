@@ -12,6 +12,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comment = Comment.new
     @like = Like.new
+    cookies[:post_id] = @post.id if @post.present?
     @user = current_user
   end
 

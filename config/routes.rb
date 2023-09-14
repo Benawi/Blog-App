@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  devise_for :users, controllers: { confirmations: 'confirmations' }
   # a route that maps the URL "/users/:author_id/posts"
   # to the "index" action of the "posts" controller.
    # It a Nested route to access posts for a specific user
