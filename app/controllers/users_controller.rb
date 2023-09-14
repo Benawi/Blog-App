@@ -4,10 +4,7 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # The function retrieves a user object from the database
-  # based on the provided ID.
-  def show
-    @user = User.find(params[:id])
-    @posts = @user.posts
+  def edit
+    current_user.update(user_params)
   end
 end
