@@ -38,4 +38,23 @@ RSpec.describe 'User post index page', type: :feature do
   it 'Pagination' do
     expect(page).to have_button('Pagination')
   end
+  context 'should redirect to post show path' do
+    it 'user can see the exact post' do
+      user = User.first
+      posts = Post.order(:id).limit(2)
+      visit user_posts_path(user.id)
+
+      posts.each do |post|
+        a = all('a#post_container')
+
+        a.each_with_index do |link, index|
+          post = posts[index]
+          link.click
+
+          expect(current_path).to eq(user_post_path(user.id, post.id))
+          visit user_posts_path(user.id)
+        end
+      end
+    end
+  end
 end
