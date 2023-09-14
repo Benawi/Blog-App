@@ -27,14 +27,14 @@ RSpec.describe 'Post show page', type: :feature do
       expect(page).to have_content("Likes: #{post.likes_counter}")
     end
 
-    it 'displays the post body' do
-      expect(page).to have_content(post.text)
-    end
-
-    it 'displays the username of each commenter and their comment' do
+        it 'displays the username of each commenter and their comment' do
       post.comments.each do |comment|
         expect(page).to have_content("#{comment.user.name} - #{comment.text}")
       end
+    end
+    
+    it 'displays the post body' do
+      expect(page).to have_content(post.text)
     end
   end
 end
