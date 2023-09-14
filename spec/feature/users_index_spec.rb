@@ -19,12 +19,6 @@ RSpec.describe 'User index page', type: :feature do
     end
   end
 
-  it 'displays the profile picture for each user' do
-    users.each do |user|
-      expect(page).to have_css("img[src='#{user.photo}'][alt='user photo']")
-    end
-  end
-
   it "redirects to the correct user's show page when clicking on a user's profile link" do
     users.each do |user|
       click_link 'View profile', href: user_path(user)
@@ -33,4 +27,11 @@ RSpec.describe 'User index page', type: :feature do
       expect(page).to have_link('View profile', href: user_path(user.id))
     end
   end
+
+  it 'displays the profile picture for each user' do
+    users.each do |user|
+      expect(page).to have_css("img[src='#{user.photo}'][alt='user photo']")
+    end
+  end
+
 end
