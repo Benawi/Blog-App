@@ -22,7 +22,6 @@ RSpec.describe 'Post show page', type: :feature do
     it 'displays the post title' do
       expect(page).to have_content(post.title)
     end
-
     it 'displays the number of likes' do
       expect(page).to have_content("Likes: #{post.likes_counter}")
     end
