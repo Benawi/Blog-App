@@ -12,6 +12,11 @@
         <% else %>
         <li class="nav-item">
           <%= link_to "Log in",  new_user_session_path, class: "nav-link" %>
+          </li>
+        <li class="nav-item">
+          <%= link_to "Sign up",  new_user_registration_path, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>  
