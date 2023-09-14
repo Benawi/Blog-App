@@ -15,12 +15,12 @@ RSpec.describe 'Post show page', type: :feature do
   describe 'GET #show' do
     before { visit user_post_path(post) }
 
-    it 'displays the post title' do
-      expect(page).to have_content(post.title)
+      it 'displays the number of comments' do
+      expect(page).to have_content("Comments: #{post.comments_counter}")
     end
 
-    it 'displays the number of comments' do
-      expect(page).to have_content("Comments: #{post.comments_counter}")
+    it 'displays the post title' do
+      expect(page).to have_content(post.title)
     end
 
     it 'displays the number of likes' do
@@ -32,7 +32,7 @@ RSpec.describe 'Post show page', type: :feature do
         expect(page).to have_content("#{comment.user.name} - #{comment.text}")
       end
     end
-    
+
     it 'displays the post body' do
       expect(page).to have_content(post.text)
     end
