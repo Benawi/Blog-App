@@ -3,7 +3,7 @@ module UsersHelper
     user.photo || "https://ui-avatars.com/api/?name=#{user.name}&background=random"
   end
 
-  def post_counter(user)
+  def posts_counter(user)
     user.posts_counter || 0
   end
 end
