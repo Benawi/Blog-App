@@ -35,6 +35,10 @@ RSpec.describe 'User post index page', type: :feature do
     end
   end
 
+  it 'can see who wrote the post' do
+    expect(page).to have_content(user.name)
+  end
+
   it 'Pagination' do
     expect(page).to have_button('Pagination')
   end
