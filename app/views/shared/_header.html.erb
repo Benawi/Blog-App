@@ -1,5 +1,6 @@
 <div h1 class="header">
 <h1>My Blog App</h1>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 w-100 mb-5">
   <div class="collapse navbar-collapse me-4" id="navbarNav">
           <% if user_signed_in? %>

@@ -17,6 +17,10 @@ class Post < ApplicationRecord
     user.increment!(:posts_counter)
   end
 
+  def decrement_posts_count
+    user.decrement!(:posts_counter)
+  end
+
   # The function returns the five most recent comments in descending order
   # of their creation time.
   def five_most_recent_comments

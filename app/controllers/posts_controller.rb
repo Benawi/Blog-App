@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   # The index function retrieves a user and their posts, and initializes a new post object.
+  load_and_authorize_resource
+
   def index
     @user = current_user
     @posts = @user.posts.includes(:comments)
@@ -9,11 +11,12 @@ class PostsController < ApplicationController
   # The function assigns variables for a post, comment, like, and user in order
   # to display them in a view.
   def show
-    @post = Post.find(params[:id])
+    @user = current_user
+    @post = Post.find_by(id: params[:id])
     @comment = Comment.new
     @like = Like.new
     cookies[:post_id] = @post.id if @post.present?
-    @user = current_user
+    nil unless @post.nil?
   end
 
   # The `create` function creates a new post and associates it with the current user,
@@ -31,6 +34,15 @@ class PostsController < ApplicationController
       @posts = @user.posts
       render :index
     end
+  end
+
+  def destroy
+    current_user = User.find(params[:author_id])
+    @post = Post.find(params[:id])
+    authorize! :destroy, @post
+    @post.destroy
+    @post.decrement_posts_count
+    redirect_to user_posts_path(current_user), notice: 'Post deleted successfully.'
   end
 
   private

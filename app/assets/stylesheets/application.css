@@ -107,19 +107,17 @@ a {
 }
 
 button {
-  width: 15%;
+  width: 50%;
   height: 5vh;
   margin-bottom: 2%;
-  margin-left: 40%;
-  font-size: 1.3em;
+  margin-left: 25%;
+  font-size: 0.85em;
 }
 
 form {
-  border: 2px solid gray;
   width: 20%;
   margin-left: 35%;
   margin-bottom: 2%;
-  padding: 2%;
 }
 
 input,

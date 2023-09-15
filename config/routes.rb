@@ -36,4 +36,6 @@ Rails.application.routes.draw do
   # route that maps the URL "/users/:author_id/posts" to the "create" action of the "posts"
   # controller.
   post "/users/:author_id/posts", to: "posts#create", as: :create_user_post
+  delete "/posts/:id", to: "posts#destroy", as: :delete_post
+  delete "/comments/:id", to: "comments#destroy", as: :delete_comment
 end
