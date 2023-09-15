@@ -19,7 +19,6 @@
     - [Run localy](#run-localy)
     - [Run Tests ](#run-tests-)
   - [👥 Authors ](#-authors-)
-    - [👤 **Habtamu Alemayehu**](#-habtamu-alemayehu)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
