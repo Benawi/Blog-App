@@ -1,4 +1,6 @@
 <%= render "shared/header" %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <% @users.each do |user| %>
     <div class="user-container">
       <img src="<%= user.photo %>" alt="user photo">
