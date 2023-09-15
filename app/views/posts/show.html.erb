@@ -21,8 +21,8 @@
     <%= form.submit "Add Comment" %><br>
   <% end %>
  </div>
-    
-  <h1 class="comments-header"> comments</h1>
+
+ <h1 class="comments-header"> comments</h1>
   <div class="post-comments">
   <% @post.comments.each do |comment| %>
    <h4>Username: <%= comment.user.name %> - <span> <%= comment.text %> </span>
