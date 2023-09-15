@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   # The index function retrieves a user and their posts, and initializes a new post object.
   load_and_authorize_resource
-  
+
   def index
     @user = current_user
     @posts = @user.posts.includes(:comments)

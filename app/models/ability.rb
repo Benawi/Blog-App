@@ -5,8 +5,8 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can :manage, Post, user: user  # owner of post can perform all view, update or destroy own post if Post.author == user
-      can :manage, Comment, user: user
+      can(:manage, Post, user:) # owner of post can perform all view, update or destroy own post if Post.author == user
+      can(:manage, Comment, user:)
       can :read, :all
     end
     # Define abilities for the user here. For example:
