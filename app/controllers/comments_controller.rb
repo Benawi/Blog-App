@@ -24,9 +24,9 @@ class CommentsController < ApplicationController
 
   private
 
- # The function `comment_params` is used to extract and permit the `text` parameter
- # from the `comment` object in the `params` hash.
- def comment_params
-   params.require(:comment).permit(:text)
- end
+  # The function `comment_params` is used to extract and permit the `text` parameter
+  # from the `comment` object in the `params` hash.
+  def comment_params
+    params.require(:comment).permit(:text)
+  end
 end
