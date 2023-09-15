@@ -2,15 +2,15 @@
 <div class="show-user-container">
 
   <div class="show-header">
-     <img src="<%= @user.photo %>" alt="user photo">
+     <img src="<%= current_user.photo %>" alt="user photo">
         <div>
             <h2>Name: <%= @user.name %></h2>
-         <h4>Number of posts: <%= @user.posts_counter %></h4>
+         <h4>Number of posts: <%= current_user.posts_counter %></h4>
         </div>
   </div>
   <div class="bio">
       <h2>Bio</h2>
-      <p><%= @user.bio %></p>
+      <p><%= current_user.bio %></p>
   </div>
   
   <% @posts.each do |post| %>
@@ -27,7 +27,7 @@
 </div>
 
 <button type="button">
-  <%= link_to "See all posts", user_posts_path(@user) %>
+   <%= link_to "See all posts", user_posts_path(@user.id) %>
 </button>
 
 <%= render "shared/footer" %>
