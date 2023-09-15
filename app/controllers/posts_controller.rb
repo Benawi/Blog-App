@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @like = Like.new
     cookies[:post_id] = @post.id if @post.present?
-    return unless @post.nil?
+    nil unless @post.nil?
   end
 
   # The `create` function creates a new post and associates it with the current user,
@@ -42,6 +42,7 @@ class PostsController < ApplicationController
     @post.decrement_posts_count
     redirect_to user_posts_path(current_user), notice: 'Post deleted successfully.'
   end
+
   private
 
   # The function `post_params` is used to extract and permit specific parameters from
