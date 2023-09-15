@@ -1,14 +1,13 @@
 class Api::CommentsController < ApplicationController
+  load_and_authorize_resource
   def index
     @comments = Comment.all
     render json: @comments
   end
 
   def create
-    @comment = Comment.new(
-      text: comment_params[:text],
-      users_id: comment_params[:users_id]
-    )
+    @post = Post.find_by_id(params[:post_id])
+    @comment = Comment.new(comment_params.merge(author_id: current_user.id, post_id: @post.id))
     if @comment.save
       @comment.update_post_comments_counter
       render json: @comment, status: :created
