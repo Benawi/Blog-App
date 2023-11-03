@@ -84,7 +84,7 @@ In order to run this project you need:
 
 - [Ruby](https://www.ruby-lang.org/en/) installed and running. To get more information, read the [installation instructions](https://github.com/microverseinc/curriculum-ruby/blob/main/simple-ruby/articles/ruby_installation_instructions.md).
 - You should be able to use [IRB](https://en.wikipedia.org/wiki/Ruby_(programming_language)#Features).
-- First of all make sure you have both `Ruby` & `Rails` installed in your machine
+- First of all, make sure you have both `Ruby` & `Rails` installed on your machine
  (else You can install `Rails` just with this simple command  ```gem install rails```)
 ### Setup
 
@@ -102,7 +102,7 @@ Install project dependencies with:
 ```
   bundle install
 ```
-### Run localy
+### Run locally
  - Then go to the right folder 
 ```
 $ cd Blog-App
@@ -119,7 +119,7 @@ make sure the database is up and running.
 ```
 $ rails db:create
 ```
-When you will add migration file then, you can add command like
+When you add migration file, you can add commands like
 ```
 $ rails db:migrate
 ```
@@ -135,7 +135,7 @@ $ rails db:seed
 Go to your gemfile and add the RSpec gem in the development, test group:
 
  ```
- group :development, :test do  
+ group : development, : test do  
   gem 'rspec-rails'
  end
  ```
@@ -149,7 +149,7 @@ To set up RSpec in your app and create the Spec folder run:
  ```
   $ rails generate rspec:install
  ```
-  To run Request specs locally you need just to run this following command in your terminal :
+  To run Request specs locally you need just to run the following command in your terminal :
  ```
  $ rspec spec/model/
  $ rspec spec/models/ --format documentation 
