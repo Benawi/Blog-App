@@ -39,7 +39,7 @@ The project is a repository consisting of the following files:
   <ul>
      <li>
       <a href="https://www.ruby-lang.org/en/">
-      <img align="center" width="19" height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/198px-Ruby_logo.svg.png?20101129171534" alt="ruby logo" />
+      <img align="center" width="19" height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/198px-Ruby_logo.svg.png?20101129171534" alt="rubylogo" />
       Ruby
       </a>
     </li>
