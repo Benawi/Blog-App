@@ -26,7 +26,7 @@
   - [📝 License ](#-license-)
 
 # 📖 Blog App <a name="about-project"></a>
-A Blog app similar classic blog website. With fully functional website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
+A Blog app similar classic blog website. With a fully functional website that shows the list of posts and empowers readers to interact with them by adding comments and liking posts.
 The project is a repository consisting of the following files:
 
 - Ruby files
@@ -61,7 +61,7 @@ The project is a repository consisting of the following files:
 
 ###  Key Features <a name="key-features"></a>
 
-- [x] Display Users, posts,comments on posts, likes on posts
+- [x] Display Users, posts, comments on posts, likes on posts
 - [x] Create a new app. 
 - [x] Processing data in model
 - [x] Validations and Model specs.
