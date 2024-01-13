@@ -29,7 +29,7 @@
 A Blog app similar classic blog website. With a fully functional website that shows the list of posts and empowers readers to interact with them by adding comments and liking post
 The project is a repository consisting of the following files:
 
-- Ruby files
+- Ruby file
 - Rails files
 - Ruby linters file
 
