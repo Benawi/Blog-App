@@ -63,7 +63,7 @@ The project is a repository consisting of the following files:
 ###  Key Features <a name="key-features"></a>
 
 - [x] Display Users, posts, comments on posts, likes on posts
-- [x] Create a new app. 
+- [x] Create a new app
 - [x] Processing data in model
 - [x] Validations and Model specs.
 - [x] Setup and controllers
