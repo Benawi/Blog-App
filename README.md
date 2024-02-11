@@ -65,7 +65,7 @@ The project is a repository consisting of the following files:
 - [x] Display Users, posts, comments on posts, likes on posts
 - [x] Create a new app
 - [x] Processing data in model
-- [x] Validations and Model specs.
+- [x] Validations and Model spec
 - [x] Setup and controllers
 - [x] The project has a Postgres database set up.
 - [x] Create and run the necessary migration files.
