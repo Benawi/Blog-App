@@ -170,7 +170,7 @@ To set up RSpec in your app and create the Spec folder run:
 
 - GitHub: [@githubhandle](https://github.com/wolterbwambale)
 - Twitter: [@twitterhandle](https://twitter.com/BwambaleWolter)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/bwambale-benny-wolter/)
+- LinkedIn [LinkedIn](https://www.linkedin.com/in/bwambale-benny-wolter/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
