@@ -119,7 +119,7 @@ make sure the database is up and running.
 ```
 $ rails db:create
 ```
-When you add migration file, you can add commands like
+When you add a migration file, you can add commands like
 ```
 $ rails db:migrate
 ```
