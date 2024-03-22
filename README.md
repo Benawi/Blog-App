@@ -67,7 +67,7 @@ The project is a repository consisting of the following files:
 - [x] Validations and Model spec
 - [x] Setup and controllers
 - [x] The project has a Postgres database set up.
-- [x] Create and run the necessary migration files.
+- [x] Create and run the necessary migration files
 - [x] Table and column names match the [ERD](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/images/blog_app_erd.png) diagram with [developed](https://github.com/Benawi/Blog-App/assets/21217148/5b403dca-d56b-4a66-bc96-58efbf0d7eae)
         
 
